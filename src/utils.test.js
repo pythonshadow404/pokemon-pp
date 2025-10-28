@@ -72,12 +72,12 @@ describe("getStrongestPokemon", () => {
 
 describe("sortByName", () => {
   // TODO: Write test to verify Pokemon are sorted alphabetically
-  // test("should sort Pokemon by name alphabetically", () => {
-  //   const result = sortByName(MOCK_DATA);
-  //   const expectedOrder = ["Bulbasaur", "Charmander", "Pikachu", "Squirtle"];
-  //   const resultNames = result.map((pokemon) => pokemon.name);
-  //   expect(resultNames).toEqual(expectedOrder);
-  // });
+  test("should sort Pokemon by name alphabetically", () => {
+    const result = sortByName(MOCK_DATA);
+    const expectedOrder = ["Bulbasaur", "Charmander", "Pikachu", "Squirtle"];
+    const resultNames = result.map((pokemon) => pokemon.name);
+    expect(resultNames).toEqual(expectedOrder);
+  });
   const INPUT = [
     { name: "Squirtle" },
     { name: "Bulbasaur" },
@@ -94,6 +94,7 @@ describe("sortByName", () => {
 
   // Act
   const actualOutput = sortByName(INPUT);
+  expect(actualOutput).toEqual(EXPECTED_OUTPUT);
 
   // TODO: Write test to verify original array is not modified (immutability)
 });
