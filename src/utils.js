@@ -20,6 +20,7 @@ export const getStrongestPokemon = (pokemonList) => {
 
 export const sortByName = (pokemonList) => {
   // TODO: Implement this function
+  pokemonList.sort((a, b) => a.name.localeCompare(b.name));
   // Hint: Use array sort method
   // Remember: Don't mutate the original array!
   return pokemonList;
